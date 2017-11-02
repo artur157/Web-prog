@@ -1,0 +1,129 @@
+<html>
+<head>
+    <meta charset="utf-8">
+</head>
+<script src="jquery.js"></script>
+<script>
+var xhr = new XMLHttpRequest();
+function go1() {
+  /*xhr.open('GET', '/3/fragment.php', false);
+  xhr.send();
+  var element = document.getElementById('frag');
+  element.innerHTML = xhr.responseText;*/
+    $.ajax({
+        type: 'GET',
+        url: '/4/fragment.php',
+        async: false,
+        success: function(data, textStatus, xhr){
+            var element = document.getElementById('frag');
+            element.innerHTML = data;
+        }
+    });
+    return false;
+}
+
+function go2() {
+  /*xhr.open('HEAD', '/3/file.tar.gz',false);
+  xhr.send();
+  var element = document.getElementById('frag');
+  element.innerHTML = xhr.getResponseHeader('Content-Length');*/
+    $.ajax({
+        type:'HEAD',
+        url:'/4/file.tar.gz',
+        async: false,
+        success: function(data, textStatus, xhr){
+            var element = document.getElementById('frag');
+            element.innerHTML = xhr.getResponseHeader('Content-Length');
+        }
+    });
+    return false;
+}
+
+function go3() {
+  /*xhr.open('HEAD', '/3/image.png',false);
+  xhr.send();
+  var element = document.getElementById('frag');
+  element.innerHTML = xhr.getResponseHeader('Content-Length');*/
+    $.ajax({
+        type:'HEAD',
+        url:'/4/image.png',
+        async: false,
+        success: function(data, textStatus, xhr){
+            var element = document.getElementById('frag');
+            element.innerHTML = xhr.getResponseHeader('Content-Type');
+        }
+    });
+    return false;
+}
+
+function go4() {
+  /*xhr.open('POST', '/3/index1.php',false);
+  xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+  xhr.send('message=Hello, world!');
+  var element = document.getElementById('frag');
+  element.innerHTML = xhr.responseText; */
+    $.ajax({
+        type:'POST',
+        url:'/4/index1.php',
+        data:'message=Hello, world!',
+        async: false,
+        success: function(data, textStatus, xhr){
+            var element = document.getElementById('frag');
+            element.innerHTML = xhr.responseText;
+        }
+    });
+    return false;
+}
+
+function go5() {
+  /*xhr.open('GET', '/3/file.tar.gz',false);
+  xhr.setRequestHeader('Range', 'bytes=0-99');
+  xhr.send();
+  var element = document.getElementById('frag');
+  element.innerHTML = xhr.responseText;  */
+    $.ajax({
+        type:'GET',
+        url:'/4/file.tar.gz',
+        async: false,
+        beforeSend: function(xhr){
+            xhr.setRequestHeader('Range', 'bytes=0-99');
+        },
+        success: function(data, textStatus, xhr){
+            var element = document.getElementById('frag');
+            element.innerHTML = data;
+        }
+    });
+    return false;
+}
+
+function go6() {
+  /*xhr.open('HEAD', '/3/index1.php',false);
+  xhr.send();
+  var element = document.getElementById('frag');
+  element.innerHTML = xhr.getResponseHeader('Content-Type');*/
+    $.ajax({
+        type:'HEAD',
+        url:'/4/index1.php',
+        async: false,
+        success: function(data, textStatus, xhr) {
+            var element = document.getElementById('frag');
+            element.innerHTML = xhr.getResponseHeader('Content-Type');
+        }
+    });
+    return false;
+}
+
+</script>
+
+<div id="frag"> </div>
+
+<form>
+<input type="submit" value="1" onclick="return go1();"/>
+<input type="submit" value="2" onclick="return go2();"/>
+<input type="submit" value="3" onclick="return go3();"/>
+<input type="submit" value="4" onclick="return go4();"/>
+<input type="submit" value="5" onclick="return go5();"/>
+<input type="submit" value="6" onclick="return go6();"/>
+</form>
+
+</html>
