@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="wes_server">
+    <serverData>
+      <paths name="wes_server">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/var/www/mydomain/8" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
