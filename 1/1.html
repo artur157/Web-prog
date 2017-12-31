@@ -1,0 +1,59 @@
+<html>
+ <head>
+    <meta charset="utf-8">
+ </head>
+ <body>
+	<a href="http://example.com" id="one">1) Абсолютная гиперссылка на главную страницу сайта example.com</a><br>
+	
+	<a href="https://example.com/">2) Абсолютная гиперссылка на главную страницу сайта example.com в протоколе https</a><br>
+
+	<a href="ftp://old.kubsu.ru/ru/readme.txt">3) Cсылка на файл на сервере FTP без авторизации</a><br>
+
+	<a href="ftp://user:pass@old.kubsu.ru/readme.txt">4) Cсылка на файл на сервере FTP с авторизацией</a><br>
+
+	<a href="http://example.com#top"> 5) Cсылка на фрагмент страницы некоторого сайта</a><br>
+
+	<a href="#one">6) Cсылка на фрагмент текущей страницы</a><br>
+
+	<a href="example.com/find?one=1&two=2">7) Ссылка с двумя параметрами в URL</a><br>
+
+	8) Список ссылок основной навигации сайта с подписями title <br>
+	
+	<ol>
+		<li><a href="example.com/nav1" title="Навигация №1"> Навигация на страницу №1</a></li>
+		<li><a href="example.com/nav2" title="Навигация №2"> Навигация на страницу №2</a></li>
+	</ol>
+	
+	<a>9) Ссылка без href</a> <br>
+
+	<a href="">10) Ссылка с пустым href </a><br>
+
+	<a href="http://example.com" rel="nofollow"> 11) Ссылка, по которой запрещен переход поисковиком </a><br>
+	
+	<noindex><a href="http://exem.com">12) Ссылка, запрещённая для индексации поисковикам </a></noindex><br>
+
+	13) <a href="https://yandex.ru/support/webmaster/controlling-robot/html.xml#noindex"> Контекстная</a> в тексте абзаца<br>
+
+	 14) Ссылка на изображение <a href="http://example.com"> <img src="clouds.jpg" width="400" height="300"> </a> <br>
+ 
+	15) Ссылка из прямоугольных и круглых областей картинки 
+	<img src="map.png" width="500" height="500" border="0" usemap="#map1"><br>
+   
+	<map name="map1">
+	    <area shape="rect" coords="50,50,200,200" href="example.com/1" target="_blank" alt="square">
+	    <area shape="circle" coords="300,300,50" href="example/com/2" target="_blank" alt="circle">
+	</map><br>
+	
+	<a href="about.html">16) Относительная ссылка на страницу в текущем каталоге</a><br>
+ 
+	<a href="/about/about.html">17) Относительная ссылка на страницу в каталоге about</a><br>        
+ 
+	<a href="../about.html">18) Относительная ссылка на страницу в каталоге уровнем выше текущего</a><br>
+ 
+	<a href="../../about.html">19) Относительная ссылка на страницу в каталоге двумя уровнями выше текущего</a><br>
+ 
+	<a href="/"> 20) Сокращённая ссылка на главную страницу сайта</a><br>
+
+	<a href="/about.html"> 21) Сокращённая ссылка на внутреннюю страницу сайта</a><br>
+ </body>
+ <html/>

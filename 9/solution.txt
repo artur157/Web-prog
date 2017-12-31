@@ -1,0 +1,6 @@
+POST /8/index.php HTTP/1.1
+Host: mydomain
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 258
+
+name=Innokentiy%20Terentev&email=inter@gmail.ru&age=1992&sex=male&quantity=4&super[]=immortality&super[]=levitation&bio=He%20was%20born%20in%20Magnitogorsk.%20Since%20childhood%20he%20has%20power%20of%20levitation.%20Besides%20he%20is%20immortal.&contract=1

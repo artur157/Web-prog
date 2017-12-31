@@ -1,3 +1,0 @@
-<?
-echo "! ".$_POST["message"];
-?>

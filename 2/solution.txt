@@ -1,0 +1,31 @@
+1) 
+GET / HTTP/1.0
+
+2)
+GET / HTTP/1.1
+Host: mydomain
+
+3)
+HEAD /file.tar.gz HTTP/1.1
+Host: mydomain
+
+4)
+HEAD /image.png HTTP/1.1
+Host: mydomain
+
+5)
+POST /1.php HTTP/1.1
+Host: mydomain
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 5\r\n
+\r\n
+message=Hello
+
+6)
+GET /file.tar.gz HTTP/1.1
+Host: mydomain
+Range: bytes=0-99
+
+7)
+HEAD /index.php HTTP/1.1
+Host: mydomain

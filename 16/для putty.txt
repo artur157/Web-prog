@@ -1,0 +1,25 @@
+GET /16/service.php HTTP/1.1
+Host: mydomain
+
+
+GET /16/service.php?file=5a40aacf7fbad HTTP/1.1
+Host: mydomain
+
+
+POST /16/service.php?file=new HTTP/1.1
+Host: mydomain
+Content-Type: application/xml
+Content-Length: 229
+
+<?xml version="1.0"?>
+<document>
+<name>Ivan</name>
+<email>ivan@mail.ru</email>
+<age>1990</age>
+<sex>male</sex>
+<quantity>4</quantity>
+<super>levitation</super>
+<bio>abc</bio>
+<login>tehbwh</login>
+<pass>wrhbtwh</pass>
+</document>
